@@ -1,13 +1,86 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "subscription_plans": [
+    {
+      "id": 1,
+      "title": "Premium Passenger",
+      "description": "Premium subscription plan for regular passengers",
+      "price": 30
+    },
+    {
+      "id": 2,
+      "title": "Manager",
+      "description": "Subscription plan for transport company managers",
+      "price": 50
+    },
+    {
+      "id": 3,
+      "title": "Student Passenger",
+      "description": "Subscription plan for students, requires verification",
+      "price": 20
     }
-  }
+  ],
+  "card_infos": [
+    {
+      "id": 1,
+      "card_number": 1234567890,
+      "holder_name": "John Doe",
+      "expiration_date": "2024-06-02",
+      "last_four_digits": 1234,
+      "users_id": 1
+    },
+    {
+      "id": 2,
+      "card_number": 9876543210,
+      "holder_name": "Jane Doe",
+      "expiration_date": "2024-06-02",
+      "last_four_digits": 5678,
+      "users_id": 2
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "status": true,
+      "start_date": "2024-04-25",
+      "end_date": "2024-05-25",
+      "subscription_plans_id": 1,
+      "users_id": 1
+    },
+    {
+      "id": 2,
+      "status": true,
+      "start_date": "2024-03-15",
+      "end_date": "2024-04-15",
+      "subscription_plans_id": 2,
+      "users_id": 2
+    },
+    {
+      "id": 3,
+      "status": true,
+      "start_date": "2024-04-09",
+      "end_date": "2024-05-15",
+      "subscription_plans_id": 2,
+      "users_id": 3
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "amount": 30,
+      "card_infos_id": 1,
+      "subscriptions_id": 1
+    },
+    {
+      "id": 2,
+      "amount": 50,
+      "card_infos_id": 2,
+      "subscriptions_id": 2
+    },
+    {
+      "id": 3,
+      "amount": 50,
+      "card_infos_id": 1,
+      "subscriptions_id": 3
+    }
+  ]
+}
